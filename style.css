@@ -160,13 +160,18 @@ button:hover {
     to { opacity: 1; }
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-    h1 {
+    header h1 {
         font-size: 1.5em;
     }
 
-    legend, h2 {
-        font-size: 1em;
+    legend {
+        font-size: 1.1em;
+    }
+
+    label {
+        font-size: 0.9em;
     }
 
     button {
@@ -175,20 +180,29 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    #quiz-container {
-        padding: 20px;
+    header {
+        padding: 15px;
     }
 
-    h1 {
+    #logo {
+        width: 50px;
+        left: 10px;
+    }
+
+    header h1 {
         font-size: 1.2em;
     }
 
-    legend, h2 {
-        font-size: 0.9em;
+    #quiz-container {
+        padding: 15px;
+    }
+
+    legend {
+        font-size: 1em;
     }
 
     label {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     button {
