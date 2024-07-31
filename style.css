@@ -8,7 +8,30 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+    box-sizing: border-box;
+}
+
+header {
+    background: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+#logo {
+    width: 70px; 
+    height: auto;
+    position: absolute;
+    top: 15px; 
+    left: 10px; 
+}
+
+/* Estilo para o título do cabeçalho */
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
 
 #quiz-container {
@@ -20,21 +43,21 @@ body {
     width: 100%;
     text-align: justify;
     color: #333;
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+    box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
-    color: #4b79a1;
+    color: white;
 }
 
 .question {
     padding: 10px;
 }
 
-h2 {
+h2, legend {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
@@ -61,8 +84,8 @@ button {
     font-size: 1.2em;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-    width: 100%; /* Largura total para ser mais responsivo */
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -78,18 +101,71 @@ button:hover {
     animation: fadeIn 1s ease-in-out forwards;
 }
 
+.progress-bar-container {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 15px;
+    transition: width 0.3s;
+}
+
+.progress-bar.analista { background-color: #4caf50; }
+.progress-bar.diplomata { background-color: #2196f3; }
+.progress-bar.sentinela { background-color: #ff9800; }
+.progress-bar.explorador { background-color: #9c27b0; }
+
+.progress-bar-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.description-card {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.description-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.description-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.description-card p {
+    margin: 0;
+    color: #666;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 768px) {
     h1 {
         font-size: 1.5em;
     }
 
-    h2 {
+    legend, h2 {
         font-size: 1em;
     }
 
@@ -107,7 +183,7 @@ button:hover {
         font-size: 1.2em;
     }
 
-    h2 {
+    legend, h2 {
         font-size: 0.9em;
     }
 
